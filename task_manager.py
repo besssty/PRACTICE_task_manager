@@ -5,7 +5,11 @@ import os
 
 SAVE_FILE = "tasks.json"
 
+<<<<<<< HEAD
 # Функції роботи з даними 555(Тест Модифікація)
+=======
+# Функції роботи з даними 123 (Тест Модифікація)
+>>>>>>> conflict
 
 def load_tasks():
     if os.path.exists(SAVE_FILE):
