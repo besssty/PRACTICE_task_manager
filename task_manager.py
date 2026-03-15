@@ -5,7 +5,7 @@ import os
 
 SAVE_FILE = "tasks.json"
 
-# Функції роботи з даними
+# Функції роботи з даними (Тест Модифікація)
 
 def load_tasks():
     if os.path.exists(SAVE_FILE):
