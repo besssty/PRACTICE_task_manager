@@ -112,9 +112,16 @@ var_priority = tk.StringVar(value="Середній")
 # UI/UX ПОМИЛКА №2 — Радіокнопки розташовані вертикально в одній клітинці
 # Всі три радіокнопки запаковані в одну клітинку grid без відступів,
 # через що вони накладаються або виглядають злипнутими.
-for val in ("Низький", "Середній", "Високий"):
-    tk.Radiobutton(frame_input, text=val, variable=var_priority,
-                   value=val).grid(row=1, column=1)
+priority_frame = tk.Frame(frame_input)
+priority_frame.grid(row=1, column=1, padx=4, pady=4, sticky="w")
+
+for i, val in enumerate(("Низький", "Середній", "Високий")):
+    tk.Radiobutton(
+        priority_frame,
+        text=val,
+        variable=var_priority,
+        value=val
+    ).pack(side="left", padx=5)
 
 # Кнопки керування
 frame_buttons = tk.Frame(root)
