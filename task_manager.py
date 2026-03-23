@@ -5,6 +5,7 @@ import os
 
 SAVE_FILE = "tasks.json"
 
+
 # Функції роботи з даними (Нова гілка)
 
 def load_tasks():
