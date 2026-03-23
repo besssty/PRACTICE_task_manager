@@ -133,7 +133,7 @@ frame_buttons.pack(pady=3)
 # користувач може випадково натиснути «Видалити» замість «Виконано».
 tk.Button(frame_buttons, text="Додати", width=10, command=add_task).grid(row=0, column=0, padx=4)
 tk.Button(frame_buttons, text="Виконано", width=10, command=mark_done).grid(row=0, column=1, padx=4)
-tk.Button(frame_buttons, text="Видалити", width=10, command=delete_task).grid(row=0, column=2, padx=4)
+tk.Button(frame_buttons, text="Видалити", width=10, fg="white", bg="red", command=delete_task).grid(row=0, column=2, padx=4)
 
 # Список завдань
 # Фрейм для списку + скрола
