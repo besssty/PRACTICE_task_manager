@@ -93,7 +93,7 @@ root.title("Менеджер завдань")
 # Якщо у списку багато завдань або шрифт системи більший —
 # контент обрізається і недоступний.
 root.geometry("400x300")
-root.resizable(False, False)
+root.minsize(400, 300)
 
 tasks = load_tasks()
 
@@ -128,8 +128,25 @@ tk.Button(frame_buttons, text="Виконано", width=10, command=mark_done).g
 tk.Button(frame_buttons, text="Видалити", width=10, command=delete_task).grid(row=0, column=2, padx=4)
 
 # Список завдань
-listbox = tk.Listbox(root, width=52, height=10, selectmode=tk.EXTENDED)
-listbox.pack(pady=5)
+# Фрейм для списку + скрола
+frame_list = tk.Frame(root)
+frame_list.pack(pady=5, fill="both", expand=True)
+
+# Скролбар
+scrollbar = tk.Scrollbar(frame_list)
+scrollbar.pack(side="right", fill="y")
+
+# Список завдань
+listbox = tk.Listbox(
+    frame_list,
+    width=52,
+    height=10,
+    selectmode=tk.EXTENDED,
+    yscrollcommand=scrollbar.set
+)
+listbox.pack(side="left", fill="both", expand=True)
+
+scrollbar.config(command=listbox.yview)
 
 refresh_list()
 root.mainloop()
