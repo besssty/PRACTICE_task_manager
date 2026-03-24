@@ -35,6 +35,7 @@
 ---
 
 ## Скриншоти
+<img width="420" height="349" alt="image" src="https://github.com/user-attachments/assets/0a588f4f-a387-49b2-9a91-ba17da5f195f" />
 
 > Нижче наведено ASCII-схему інтерфейсу застосунку (tkinter-вікно):
 
